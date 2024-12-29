@@ -8,6 +8,8 @@ import (
 	"aoc2024backend/day1"
 	"aoc2024backend/day2"
 	"aoc2024backend/day3"
+	"aoc2024backend/day4"
+	"aoc2024backend/day5"
 	"aoc2024backend/utils"
 )
 
@@ -55,6 +57,24 @@ func programRunner(day int, part int, filename string) {
 			log.Println(res)
 		case 2:
 			res := day3.Part2(filename)
+			log.Println(res)
+		}
+	case 4:
+		switch part {
+		case 1:
+			res := day4.Part1(filename)
+			log.Println(res)
+		case 2:
+			res := day4.Part2(filename)
+			log.Println(res)
+		}
+	case 5:
+		switch part {
+		case 1:
+			res := day5.Part1(filename)
+			log.Println(res)
+		case 2:
+			res := day5.Part2(filename)
 			log.Println(res)
 		}
 	}
