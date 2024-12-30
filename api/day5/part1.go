@@ -1,7 +1,6 @@
 package day5
 
 import (
-	"fmt"
 	"os"
 	"slices"
 	"strconv"
@@ -12,8 +11,6 @@ import (
 
 func Part1(filename string) int {
 	rulesTable, updateLists := parseFile(filename)
-	fmt.Println(rulesTable)
-	fmt.Println(updateLists)
 
 	total := 0
 	for _, list := range updateLists {
@@ -28,7 +25,6 @@ func Part1(filename string) int {
 func validateList(rulesTable map[int][]int, updateList []int) bool {
 	for ind, page := range updateList[:len(updateList)-1] {
 		preReqs := rulesTable[page]
-		fmt.Println("Looking for prereqs: ", preReqs, " of page ", page)
 		for _, nextPage := range updateList[ind+1:] {
 			if !slices.Contains(preReqs, nextPage) {
 				return false
