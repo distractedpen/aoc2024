@@ -9,7 +9,6 @@ import (
 	"aoc2024backend/utils"
 )
 
-// 64984403 too low
 
 func Part1(filename string) int {
 	input := utils.Readfile(filename)
